@@ -1,0 +1,205 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Caveat&family=Grenze+Gotisch:wght@800&family=Hind:wght@300&family=Khand&family=Monoton&family=Pridi:wght@200&family=Quicksand:wght@300&family=Ramaraja&family=Redressed&family=Roboto+Slab:wght@300&family=Source+Serif+4:wght@500&family=Ultra&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+</head>
+<!-- font-family: 'Abril Fatface', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Grenze Gotisch', cursive;
+font-family: 'Hind', sans-serif;
+font-family: 'Khand', sans-serif;
+font-family: 'Monoton', cursive;
+font-family: 'Pridi', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Ramaraja', serif;
+font-family: 'Redressed', cursive;
+font-family: 'Source Serif 4', serif;
+font-family: 'Ultra', serif; -->
+<style type="text/css">
+	*{
+		margin: 0;
+		padding: 0;
+		box-sizing: border-box;
+	}
+	body{
+		width: 100%;
+		height: 100vh;
+	}
+	.login-box{
+		position: relative;
+		left: 32rem;
+		top: 5rem;
+	   width: 31.3rem;
+	   height: 40rem;
+	   border-radius: 10px;
+	   border: 1px solid #000;
+	   background-image:url("https://images.pexels.com/photos/2203051/pexels-photo-2203051.jpeg?auto=compress&cs=tinysrgb&w=1260&h=750&dpr=1");
+	   background-size: cover;
+	   background-repeat: no-repeat;
+	   box-shadow:10px 10px 10px #000;
+	   	}
+	.login-title{
+		position: absolute;
+		text-align: center;
+		font-family: 'Monoton', cursive;
+        color: #fff;
+        left: 42%;
+        font-size: 25px;
+        text-decoration: underline;
+	}
+	label{
+		position: absolute;
+		margin-top: 1.8rem;
+		font-family: 'Quicksand', sans-serif;
+		color: #fff;
+		font-weight: 600;
+		}
+	input{
+		position: relative;
+		margin-top: 2rem;
+	   font-size: 18px;
+	   width: 28.8rem;
+	   height: 3rem;
+	   border: 1px solid #bfbfbf;
+	   border-radius: 1px;	
+	   outline: none;
+	   font-family: 'Pridi', serif;
+	}
+	input::placeholder{
+		position: absolute;
+		font-size: 15px;
+		margin-top: 10px;
+	     margin-left: 15px;
+	}
+	input:focus{
+		border: 1px solid #33ccff;
+	}
+	.orline{
+		position: absolute;
+		margin-top: 1.4rem;
+		width: 27.7rem;
+		height: 1px;
+		background-color: #fff;
+	}
+	.orline p{
+		position: absolute;
+		margin-top: -0.7rem;
+		left: 13rem;
+		width: 25px;
+		height: 25px;
+		text-align: center;
+		color: #fff;
+        border-radius: 50%;
+        padding-top: 3px;
+			background-color: rgba(0, 0, 0,0.5);
+	}
+	.submit{
+		background-color: #0066ff;
+		color: #fff;
+		font-family: 'Roboto Slab', serif;
+		cursor: pointer;
+		outline: none;
+		border: none;
+	}
+	.facebook{
+     background-color: #4267B2;
+		color: #fff;
+		font-family: 'Roboto Slab', serif;
+		cursor: pointer;
+		outline: none;
+		border: none;
+	}
+	.google{
+           background-color: #cc0000;
+		color: #fff;
+		font-family: 'Roboto Slab', serif;
+		cursor: pointer;
+		outline: none;
+		border: none;
+	}
+	.inner{
+		width: 100%;
+		height: 100%;
+		 padding: 15px;
+		background-color: rgba(0, 0, 0,0.7);
+	}
+	.gicon{
+		position: absolute;
+	color: #fff;
+    top: -1rem;
+    left: 4rem;		
+	}
+	.ficon{
+		position: absolute;
+	color: #fff;
+    top: -1rem;
+    left: 4rem;		
+	}
+	.address{
+  position: relative;
+  margin-top: 100px;
+  border-top: 1px solid #fff;
+  background-color: #000;
+  width: 100%;
+  height: 3rem;
+}
+.address p{
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+}
+.Circle{
+	position: absolute;
+	width: 50px;
+	height: 50px;
+	margin-top: 2rem;
+	margin-left: 2rem;
+	border-radius: 50%;
+	background-color: #fff;
+	box-shadow: 2px 2px 3px #000;
+}
+.Circle i{
+	color: #ffcc00;
+	text-align: center;
+	margin-top: 10px;
+	margin-left: 6px;
+}
+.Circle:hover,i:hover{
+	cursor: pointer;
+	color: #003399;
+ background-color: #33ccff;
+}
+</style>
+<body>
+	<div class="Circle">
+		<a href="book.html"><i class="fa-solid fa-arrow-left-long fa-2x"></i></a>
+	</div>
+<div class="login-box">
+	<div class="inner">
+	<div class="login-title">LOGIN</div><br>
+	<label class="user">Username</label><br>
+	<input type="text" name="" placeholder="user.."><br>
+		<label class="email">Email</label><br>
+	<input type="email" name="" placeholder="email.."><br>
+		<label class="password">Password</label><br>
+	<input type="password" name="" placeholder="password.."><br><a href="" style="color: #ff0000">Forget Password</a><br>
+	<input type="submit" name="" value="submit" class="submit"><br>
+	<span class="orline"><p>OR</p></span><br>
+	<input type="submit" name="" value="Log in with Google" class="google"><i class="fa-brands fa-google-plus-g fa-2x" class="gicon" style="position: absolute;color: #fff;margin-top: 2.5rem;transform: translateX(-9rem);"></i><br>
+	<input type="submit" name="" value="Log in Facebook" class="facebook"><i class="fa-brands fa-facebook-square fa-2x" class="ficon" style="position: absolute;color: #fff;margin-top: 2.5rem;transform: translateX(-9.5rem);"></i>
+</div>
+</div>
+<div class="address">
+    <p>Email:mitchatchain678@gmail.com & krishnaAhari@gmail.com</p>
+    <p>Contact:9166440684,9587062457</p>
+  </div>
+</body>
+</html>

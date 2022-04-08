@@ -1,0 +1,798 @@
+<!DOCTYPE html>
+<html>
+<head>
+	<meta charset="utf-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<title></title>
+	  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+        <!-- jQuery library -->
+        <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+        
+        <!-- Popper JS -->
+        <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.16.0/umd/popper.min.js"></script>
+        
+        <!-- Latest compiled JavaScript -->
+        <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+        <script src="https://kit.fontawesome.com/f88d2fa247.js" crossorigin="anonymous"></script>
+       <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Caveat&family=Grenze+Gotisch:wght@800&family=Hind:wght@300&family=Khand&family=Pridi:wght@200&family=Quicksand:wght@300&family=Ramaraja&family=Redressed&family=Source+Serif+4:wght@500&family=Ultra&display=swap" rel="stylesheet">
+        <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/css/bootstrap.min.css"> 
+          <link
+    rel="stylesheet"
+    href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css"
+  />
+
+      <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/fontawesome.min.css" integrity="sha512-xX2rYBFJSj86W54Fyv1de80DWBq7zYLn2z0I9bIhQG+rxIF6XVJUpdGnsNHWRa6AvP89vtFupEPDP8eZAtu9qA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css" integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Abril+Fatface&family=Bungee&family=Caveat&family=Crete+Round&family=Grenze+Gotisch:wght@800&family=Hind:wght@300&family=Khand&family=Pridi:wght@200&family=Quicksand:wght@300&family=Ramaraja&family=Redressed&family=Source+Serif+4:wght@500&family=Ultra&display=swap" rel="stylesheet">
+
+<!-- font-family: 'Abril Fatface', cursive;
+font-family: 'Bungee', cursive;
+font-family: 'Caveat', cursive;
+font-family: 'Crete Round', serif;
+font-family: 'Grenze Gotisch', cursive;
+font-family: 'Hind', sans-serif;
+font-family: 'Khand', sans-serif;
+font-family: 'Pridi', serif;
+font-family: 'Quicksand', sans-serif;
+font-family: 'Ramaraja', serif;
+font-family: 'Redressed', cursive;
+font-family: 'Source Serif 4', sans-serif;
+font-family: 'Ultra', serif; -->
+</head>
+<style type="text/css">
+	*{
+		padding: 0;
+		margin: 0;
+		box-sizing: border-box;
+	}
+	body{
+    width: 100%;
+		height: 100vh;
+    overflow-x: hidden;
+	}
+  .sticky {
+  position: fixed;
+  top: 0;
+  width: 100%;
+}
+
+.sticky + .content {
+  padding-top: 102px;
+}
+	.navbar{
+		height: 3.6em;
+		z-index: 4;
+	}
+    .navbar-body{
+    	display: flex;
+    	position: absolute;
+    	right: 4px;
+    }
+    #navsearch{
+    	position: relative;
+    	margin-right: 5em;
+    	outline: none;
+    	border: none;
+    	width: 25em;
+    	height: 2.5em;
+    	top: 2px;
+
+    }
+    #btn1{
+      margin-right: 1em;
+      width: 8em;
+      height: 3em;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background-color: #ff0066;
+      color: #fff;
+    }
+    #btn2{
+  margin-right: 1em;
+   width: 8em;
+      height: 3em;
+      border: none;
+      outline: none;
+      border-radius: 10px;
+      background-color: #ff0066;
+      color: #fff;
+    }
+    #glpbtn{
+    	position: absolute;
+    	right: 13.1em;
+    	width: 3em;
+    	text-align: center;
+    	align-content: center;
+    	justify-content: center;
+    	height: 1.8em;
+    	padding-top: 0.5em;
+    	font-size: 20px;
+    	background-color: #00ccff;
+    	color: #fff;
+    	border-bottom-right-radius: 5px;
+    	border-top-right-radius: 5px;
+    }
+    .sub-nav{
+      position: relative;
+      display:flex;
+      width: 100%;
+      height: 2.4rem;
+      transform: translateY(-1.8rem);
+      border-radius: 5px;
+      border: 1px solid #8c8c8c;
+      background: linear-gradient(to top,#cccccc,#ececec);
+    }
+    .sub-nav p{
+      font-size: 13px;
+    }
+    .sub-nav input{
+      position: absolute;
+      right: 10rem;
+      width: 9rem;
+      margin-top: 2px;
+      font-size: 11px;
+      border-radius: 1px;
+      cursor:pointer;
+      background: linear-gradient(to bottom,#cccccc,#fff);
+      border:1px solid #8c8c8c;
+    }
+    #btn4{
+         position: absolute;
+      right: 3rem;
+      width: 6rem;
+      margin-top: 2px;
+      font-size: 11px;
+      border-radius: 1px;
+      cursor:pointer;
+      color: #000;
+      background: linear-gradient(to bottom,#cccccc,#fff);
+      border:1px solid #8c8c8c;
+     /* opacity: 0.5;
+*/    }
+    .productsimg{
+      position: relative;
+      width: 100%;
+      height: 80rem;
+      transform: translateY(-1.8rem);
+      background-image: url("https://i.pinimg.com/originals/ae/48/66/ae4866824012b855e82a358960c1d0d6.jpg");
+      background-size: cover;
+      background-repeat: no-repeat;
+          }
+    .one-column{
+      position: absolute;
+     margin-top: ;
+     width: 50%;
+     height: 100%;
+    }
+    .second-column{
+      position: absolute;
+    /*margin-top: ;*/
+    right: 0px;
+     width: 50%;
+     border-left: 1px solid #cccccc;
+     height: 100%;
+    }
+    .product-item{
+      position: absolute;
+      display: flex;
+      top: 44rem;
+      left: 11rem;
+      width: 13rem;
+      height: 3.5rem;
+      overflow: hidden;
+      font-size: 20px;
+      background-color: #000;
+    }
+    .product-item a input{
+      height: 100%;
+      border: ;
+      width: 4.4rem;
+      font-size: 20px;
+       border:1px solid #8c8c8c;
+       color: #000;
+      background: linear-gradient(to bottom, #737373,#ececec);
+
+    }
+    #nincri{
+      background: linear-gradient(to bottom,#fff,#fff); 
+      text-align: center;
+    }
+    .product-btn{
+      position: absolute;
+      bottom: 0px;
+      padding: 30px 70px;
+      display: block;
+      justify-content: center;
+      align-content: center;
+      width: 100%;
+      height: 20%;
+    }
+  .product-btn a #icon1{
+    position: absolute;
+    color: #fff;
+    transform: translateX(16rem);
+    padding-top: 6px;
+  }
+.product-btn a #icon2 {
+    position: absolute;
+    color: #fff;
+    transform: translateX(12rem);
+    padding-top: 6px;
+  }
+  .product-btn .buy{
+    width: 50rem;
+    height: 4rem;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    margin-bottom: 20px;
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    box-shadow: 0px 10px 10px #000;
+    text-transform: capitalize;
+    border-radius: 60rem;
+    letter-spacing: 2px;
+    transition: 0.6s ease;
+    background-color: purple;
+  }
+  .product-btn .buy:hover{
+    /*border: 2px solid purple;
+*/    color: #fff;
+    font-size: 20px;
+    font-family: 'Crete Round', serif;
+    transition: 0.6s ease;
+    background: linear-gradient(to right,#0000ff,purple);
+  }
+  .product-btn .wish{
+    width: 50rem;
+    height: 4rem;
+    border: none;
+    color: #fff;
+    font-size: 20px;
+    box-shadow: 0px 10px 10px #000;
+    font-family: 'Crete Round', serif;
+    font-weight: 400;
+    text-transform: capitalize;
+    border-radius: 60rem;
+    letter-spacing: 2px;
+    transition: 0.6s ease;
+    background-color: purple;
+  }
+  .product-btn .wish:hover{
+    /*border: 2px solid purple;
+*/    color: #fff;
+    font-size: 20px;
+    font-family: 'Crete Round', serif;
+    transition: 0.6s ease;
+    background: linear-gradient(to right,#0000ff,purple);
+  }
+  .price{
+    position: absolute;
+    top: 30rem;
+    left: 11rem;
+    letter-spacing: 2px;
+    font-size: 35px;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .pri{
+     position: absolute;
+    top: 30rem;
+    left: -0.3rem;
+    letter-spacing: 2px;
+    font-size: 35px;
+     font-family: 'Quicksand', sans-serif;
+  }
+  .quant{
+     position: absolute;
+    top: 39rem;
+    font-size: 24px;
+    left: 11rem;
+    font-family: 'Quicksand', sans-serif;
+  }
+  .about{
+    position: absolute;
+    top: 23rem;
+    left: 11rem;
+     /*font-family: 'Quicksand', sans-serif;*/
+  }
+  .about-title{
+    position: absolute;
+    font-size: 35px;
+    color: #808080;
+    text-decoration: underline;
+    font-family: 'Grenze Gotisch', cursive;
+    font-weight: 600;
+  }
+  .about ul{
+    margin-top: 5.8rem;
+    font-weight: 700;
+    color: #404040;
+ font-family: 'Quicksand', sans-serif;
+  }
+  .book-title{
+    position: absolute;
+      top: 8rem;
+    left: 8rem;
+   font-family: 'Pridi', serif;
+   }
+   .book-title h1{
+    color: red;
+    font-size: 60px;
+   }
+   .big-img img{
+    position: absolute;
+    width: 60%;
+    height: 64rem;
+    top: 4rem;
+    left: 11rem;
+    box-shadow: 2px 5px 10px #000;
+   }
+   .big-show{
+    position: absolute;
+    top: 90%;
+    left: 7%;
+    display: inline-block;
+    background-color: #fff;
+    width: 80%;
+    height: 70px;
+    box-shadow: 2px 5px 10px #000;
+   }
+   .big-show img{
+    border: 2px solid black;
+    width: 90px;
+    height: 100%;
+   }
+   .related-group{
+    background-color: #d9d9d9;
+    margin-left: 4rem;
+    width: 95%;
+    display: flex;
+    overflow-x: scroll;
+   }
+
+        .related-group::-webkit-scrollbar{
+  height: 6px; 
+}
+ .related-group::-webkit-scrollbar-track{
+    box-shadow: inset 0 0 1px rgb(0, 0, 0);
+  background: linear-gradient(to top,#fff,#d9d9d9);
+  border-radius: 8px;
+}
+ .related-group::-webkit-scrollbar-thumb{
+  background: #808080;
+  border-radius: 10px;
+}
+ .related-group::-webkit-scrollbar-thumb:hover{
+  background:  #808080;
+}
+   .related-group a img{
+    margin-left: 20px;
+        width: 20rem;
+     margin-top: 40px;
+        height: 20rem;
+   }
+   .related-b{
+    width: 96%;
+    margin-top: 45px;
+    margin-left: 4rem;
+    height: 35rem;
+    border-bottom:1px solid #cccccc;
+    /*background-color: red;
+*/   }
+   .related-b h2{
+    transform: translateY(-60px);
+    font-size: 30px;
+    color: #808080;
+    margin-left: 1rem;
+    font-family: 'Source Serif 4', sans-serif;
+
+   }
+
+   .footer{
+    position: relative;
+    top: 80rem;
+  width: 100%;
+  height: 40rem;
+  background-color: #000;
+  color: #fff;
+  transform: translateY(-70rem);
+  display: flex;
+}
+.footer .para1{
+  outline: none;
+  line-height: 3rem;
+  margin-left: 15rem;
+}
+.footer .para1 ul li{
+  margin-top: 4rem;
+  font-size: 16px;
+  list-style: none;
+    cursor: pointer;
+}
+.footer .para2 ul li{
+  margin-top: 4rem;
+  font-size: 16px;
+  list-style: none;
+  cursor: pointer;
+}
+.footer .para2{
+  outline: none;
+  line-height: 5rem;
+  margin-left: 20rem;
+}
+.address{
+  position: absolute;
+  bottom: 0px;
+  border-top: 1px solid #fff;
+  background-color: #000;
+  width: 100%;
+  height: 5rem;
+}
+.address p{
+  text-align: center;
+  color: #fff;
+  font-style: italic;
+}
+h4{
+  margin-left: 40rem;
+  margin-top: 8rem;
+  font-size: 65px;
+  text-decoration: underline;
+  font-family: 'Ultra', serif;
+  color: #fff;
+}
+h2{
+  position: absolute;
+  transform: translateY(-76rem);
+  color: #999999;
+  left: 10rem;
+  font-family: 'Ultra', serif;
+}
+.rate{
+  font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  transform: translateY(1rem);
+}
+
+.review{
+  width: 40rem;
+  height: 7rem;
+  margin-top: 20px;
+  display: inline-block;
+  text-align: center;
+  clip-path: polygon(0% 0%, 75% 0%, 100% 50%, 75% 100%, 0% 100%);
+  background-color: #ffff80;
+}
+
+.review i{
+  position: relative;
+  transform: translateX(-6rem);
+  bottom: -1rem;
+   color: #fff;
+}
+
+
+
+#fa5:hover{
+  color:  #4267B2;
+}
+#fa3:hover{
+  color:  #25D366;
+}
+#fa4:hover{
+  color:   #0e76a8;
+}
+#fa2:hover{
+  color:   #00acee;
+}
+#fa1:hover{
+  color: #bc2a8d;
+}
+
+#feeder{
+ /* position: relative;*/
+  width: 95%;
+  height: 30rem;
+  margin-left: 4rem;
+  transform: translateY(5rem);
+  border-top: 1px solid    #bfbfbf;
+  border-bottom: 1px solid   #bfbfbf;
+
+}
+.feed-title{
+   font-family: 'Quicksand', sans-serif;
+  font-size: 30px;
+  transform: translateY(4rem);
+  margin-left: 4rem;
+}
+.subdiv{
+  margin-top: 2%;
+  width: 100%;
+  display: flex;
+  height: 96%;
+}
+.subdiv div{
+  width: 50rem;
+  word-wrap: break; 
+  display: flex;
+  height: 23rem;
+  margin-top: 20px;  
+  border: 1px solid    #bfbfbf;
+  /*background-color: greenyellow;
+*/  margin-left: 12px;
+  box-shadow: 2px 6px 6px #000;
+}
+.subdiv .card-img{
+  position: absolute;
+  width: 120px;
+  height: 120px;
+  top: 60px;
+  border: 1px solid    #bfbfbf;
+  transform: translateX(32rem);
+  border-radius: 50%;
+}
+.subdiv p{
+  position: absolute;
+  width: 14%;
+  height: 8rem;
+  margin-top: 30px;
+  margin-left: 10px;
+  word-wrap: break-word;
+}
+.subdiv .cstar1{
+  position: absolute;
+  margin-bottom: 10px;
+  margin-left:2rem ;
+  transform: translateY(18rem);
+}
+
+.subdiv .card-title{
+  width: 60%;
+  margin-top: 17rem;
+  margin-left: 33rem;
+  background: none;
+}
+
+ </style>
+<body>
+	<nav class="navbar navbar-inverse navbar-sticky">
+	<div class="container-fluid">
+		<div class="navbar-dialog">
+			<div class="navbar-content">
+				<h1 class="navbar-brand"><img src="C:\MAMP\htdocs\book\bkimg.png" style="width:10em; height: 2em; transform: translateY(-2em);position: absolute; left: 15px;"></h1>
+				<div class="navbar-body">
+					<input type="search" name="" id="navsearch" placeholder="Search..">
+					<p><span class="glyphicon glyphicon-search" id="glpbtn"></span></p>
+					<button id="btn1" data-toggle="modal" data-target="#modalitem">Login</button>
+					<button id="btn2">Register</button>
+				</div>
+			</div>
+		</div>
+	</div>
+</nav>
+<section class="sub-nav">
+  <p>Please read the terms and conditon of website carefully before purchasing any book.</p>
+
+  <input type="button" name="" value="Terms & condition">
+  <input type="button" name="" value="Help" id="btn4">
+</section>
+<section class="productsimg">
+ <div class="one-column">
+   <div class="big-img">
+     <img src="C:\MAMP\htdocs\book\motivational book\book1.jpg">
+   </div>
+   <div class="big-show">
+     <img src="C:\MAMP\htdocs\book\motivational book\book1.jpg">
+     <img src="C:\MAMP\htdocs\book\motivational book\book1.jpg">
+     <img src="C:\MAMP\htdocs\book\motivational book\book1.jpg">
+     <img src="C:\MAMP\htdocs\book\motivational book\book1.jpg">
+   </div>
+ </div> 
+ <div class="second-column">
+  <div class="book-title"><h1>Chanakya Niti: Andhaya 4th edition</h1></div>
+  <div class="about">
+    <h3 class="about-title">About Book:</h3>
+    <ul>
+      <li>Amazing Strories with full content</li>
+      <li>1 Pencil box with hb pencil</li>
+      <li>1 Pencil box with hb pencil</li>
+      <li>1 Pencil box with hb pencil</li>
+    </ul>
+    <p class="pri">Price:</p>
+    <p class="price">
+      ₹100.0
+    </p>
+  </div>
+  <span class="quant">Quantity:</span>
+  <div class="product-item">
+    <a href="#"><input type="button" name="" value="-" id="nincri1"></a>
+    <a href="#"><input type="text" name="" value="0" id="nincri" ></a>
+    <a href="#"><input type="button" name="" value="+" id="nincri2"></a>
+  </div>
+   <div class="product-btn">
+     <a href="#" class="aicon1" ><i class="fa-solid fa-bag-shopping fa-2x" id="icon1"></i><input type="submit" name="" value="Buy Now" class="buy"></a><br>
+    <a href="#" class="aicon2"><i class="fa-solid fa-cart-plus fa-2x" id="icon2"></i><input type="submit" name="" value="Add To Wishlist" class="wish"></a>
+   </div>
+ </div>
+</section>
+<div class="related-b">
+  <h2>Related Books:</h2>
+  <div class="related-group">
+       <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book2.jpg" class="st1"><p id="price">₹ 150.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book3.jpg" class="st1"><p id="price">₹ 190.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book4.jpg" class="st1"><p id="price">₹ 150.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book5.jpg" class="st1"><p id="price">₹ 300.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book6.jpg" class="st1"><p id="price">₹ 99.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book7.jpg" class="st1"><p id="price">₹ 500.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book8.jpg" class="st1"><p id="price">₹ 1000.00</p></a>
+  <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book9.jpg" class="st1"><p id="price">₹ 120.00</p></a>
+    <a href=""><img src="C:\MAMP\htdocs\book\motivational book\book10.jpg" class="st1"><p id="price">₹ 600.00</p></a>
+  </div>
+</div>
+<p class="rate">Rating</p>
+<div class="review">
+    <i class="fa-solid fa-star fa-3x" id="star1"></i>
+   <i class="fa-solid fa-star fa-3x" id="star2"></i>
+    <i class="fa-solid fa-star fa-3x" id="star3"></i>
+     <i class="fa-solid fa-star fa-3x" id="star4"></i>
+     <i class="fa-solid fa-star fa-3x" id="star5"></i>
+  <!--   <div class="star">
+      <span >&#9733;</span>
+      <span >&#9733;</span>
+      <span >&#9733;</span>
+      <span >&#9733;</span>
+      <span >&#9733;</span>
+      </div> -->
+</div>
+<p class="feed-title">Feedback</p>
+<section id="feeder">
+  <div class="subdiv">
+      <div id="card1">
+        <p>Leorum jsbdj sdf sjbndf jdsf an jnsdf nmsdjbfnd fjdbf fd jsdbfhjbsd,bhd bjbdns  bhdcd  bsdj nbsd hhcsd cb.</p>
+        <span class="cstar1">
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+        </span>
+        <img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png" class="card-img">
+        <p class="card-title">Hardy Mayanar</p>
+      </div>
+  <div id="card2">
+     <p>Leorum jsbdj sdf sjbndf jdsf an jnsdf nmsdjbfnd fjdbf fd jsdbfhjbsd,bhd bjbdns  bhdcd  bsdj nbsd hhcsd cb.</p>
+        <span class="cstar1">
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+        </span>
+        <img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png" class="card-img">
+        <p class="card-title">Hardy Mayanar</p>
+  </div>
+    <div id="card3">
+     <p>Leorum jsbdj sdf sjbndf jdsf an jnsdf nmsdjbfnd fjdbf fd jsdbfhjbsd,bhd bjbdns  bhdcd  bsdj nbsd hhcsd cb.</p>
+        <span class="cstar1">
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+          <i class="fa-solid fa-star fa-2x" ></i>
+        </span>
+        <img src="https://cdn.pixabay.com/photo/2018/04/18/18/56/user-3331257__340.png" class="card-img">
+        <p class="card-title">Hardy Mayanar</p>
+  </div>
+ <!--  <div id="card3"></div>
+  <div id="card4"></div>
+  <div id="card5"></div> 
+  <div id="card6"></div>
+  <div id="card7"></div>
+  <div id="card8"></div> -->
+  </div>
+</section>
+<section class="footer">
+  <div class="para1">
+  <ul>
+    <li>About</li>
+    <li>contact</li>
+    <li>feedback</li>
+  </ul>
+  </div>
+  <div class="para2">
+      <ul>
+    <li>Terms & Condition</li>
+    <li>Policy</li>
+    <li>Help</li>
+  </ul>
+  </div>
+  <h4>BookShell</h4>
+  <i class="fa-brands fa-instagram fa-3x" style="transform: translateX(-40rem);margin-top: 19rem;cursor: pointer;" id="fa1"></i>
+  <i class="fa-brands fa-twitter fa-3x" style="transform: translateX(-36rem);margin-top: 19rem;cursor: pointer;" id="fa2"></i>
+  <i class="fa-brands fa-whatsapp fa-3x" style="transform: translateX(-33rem);margin-top: 19rem;cursor: pointer;" id="fa3"></i>
+  <i class="fa-brands fa-linkedin-in fa-3x"  style="transform: translateX(-28rem);margin-top: 19rem;cursor: pointer;" id="fa4"></i>
+  <i class="fa-brands fa-facebook fa-3x"  style="transform: translateX(-23rem);margin-top: 19rem;cursor: pointer;"  id="fa5"></i>
+  <div class="address">
+    <p>Email:mitchatchain678@gmail.com & krishnaAhari@gmail.com</p>
+    <p>Contact:9166440684,9587062457</p>
+  </div>
+</section> 
+
+<script type="text/javascript">
+
+  // ********************for Sticky navbar****************
+    window.onscroll = function() {myFunction()};
+
+var header = document.querySelector(".navbar");
+var sticky = header.offsetTop;
+
+function myFunction(){
+  if (window.pageYOffset > sticky) {
+    header.classList.add("sticky");
+  } else {
+    header.classList.remove("sticky");
+  }
+}
+// ****************************** sticky navbar end************
+
+// ********************for increment and decrement the Quantity*****
+  var btn1=document.getElementById("nincri1");
+   var btn2=document.getElementById("nincri").value;
+    var btn3=document.getElementById("nincri2");
+     
+   var btn4=0;  
+   btn3.addEventListener("click",()=>{
+    btn4++;
+   var btn2=document.getElementById("nincri").value=btn4;
+   }
+    );
+      btn1.addEventListener("click",()=>{
+      btn4--;
+    var btn2=document.getElementById("nincri").value=btn4;  
+   }
+    );
+// *************************end of Quantity**************      
+
+ // *************************Star rating********************************
+ var str1=document.querySelector("#star1");
+ var str2=document.querySelector("#star2"); 
+ var str3=document.querySelector("#star3");
+ var str4=document.querySelector("#star4");
+ var str5=document.querySelector("#star5");
+
+ str1.addEventListener("click",()=>{
+  str1.setAttribute("style","color:#003300")
+ });
+ str2.addEventListener("click",()=>{
+  str1.setAttribute("style","color:#003300")
+  str2.setAttribute("style","color: #003300")
+ })
+ str3.addEventListener("click",()=>{
+  str1.setAttribute("style","color:#003300")
+  str2.setAttribute("style","color: #003300")
+  str3.setAttribute("style","color: #003300")
+ })
+ str4.addEventListener("click",()=>{
+    str1.setAttribute("style","color:#003300")
+  str2.setAttribute("style","color: #003300")
+  str3.setAttribute("style","color: #003300")
+  str4.setAttribute("style","color: #003300")
+ })
+ str5.addEventListener("click",()=>{
+     str1.setAttribute("style","color:#003300")
+  str2.setAttribute("style","color: #003300")
+  str3.setAttribute("style","color: #003300")
+  str4.setAttribute("style","color: #003300")
+  str5.setAttribute("style","color: #003300")
+ })
+ // ************************star rating end********************
+</script>
+</body>
+</html>
